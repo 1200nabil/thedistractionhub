@@ -50,6 +50,13 @@ function toggleMode() {
   icon.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
 }
 
+    setupFooterYear() {
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    }
+
 function createParticle() {
   const particle = document.createElement('div');
   particle.className = 'particle';
